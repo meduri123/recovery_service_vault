@@ -8,6 +8,12 @@
 #   }
 # }
 
+provider "azurerm" {
+  features {}
+  subscription_id = "c5dd9b7d-a3b4-4e19-8889-fbbc538569e7"
+  
+}
+
 module "azure_recovery_services_vault" {
   source = "git::https://github.com/Azure/terraform-azurerm-avm-res-recoveryservices-vault.git?ref=2794a299f935ed4999685a92fae7523b91b72267"
   # version = "0.1.1"

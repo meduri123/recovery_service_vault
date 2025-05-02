@@ -14,8 +14,8 @@ variable "name" {
 variable "recovery_vault_config" {
   type = object({
     # name                                           = string
-    #location                                       = string
-    #resource_group_name                            = string
+    location                                       = string
+    resource_group_name                            = string
     cross_region_restore_enabled                   = bool
     alerts_for_all_job_failures_enabled            = bool
     alerts_for_critical_operation_failures_enabled = bool

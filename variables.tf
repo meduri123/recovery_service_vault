@@ -1,10 +1,10 @@
 
-variable "subscription_id" {
-  type = string
-}
-variable "tenant_id" {
-  type = string
-}
+# variable "subscription_id" {
+#   type = string
+# }
+# variable "tenant_id" {
+#   type = string
+# }
 variable "name" {
   type        = list(string)
   description = "Name: specify a name for the Azure Recovery Services Vault. Upper/Lower case letters, numbers and hyphens. number of characters 2-50"

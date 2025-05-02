@@ -1,12 +1,12 @@
-module "resource_group" {
-  source   = "./modules/resource_group"
-  name     = "example-rg"
-  location = "East US"
-  tags = {
-    Environment = "Dev"
-    Team        = "DevOps"
-  }
-}
+# module "resource_group" {
+#   source   = "./modules/resource_group"
+#   name     = "example-rg"
+#   location = "East US"
+#   tags = {
+#     Environment = "Dev"
+#     Team        = "DevOps"
+#   }
+# }
 
 module "azure_recovery_services_vault" {
   source = "git::https://github.com/Azure/terraform-azurerm-avm-res-recoveryservices-vault.git?ref=2794a299f935ed4999685a92fae7523b91b72267"
@@ -15,8 +15,8 @@ module "azure_recovery_services_vault" {
   for_each = toset(var.name)
   
   name                                           = each.key
-  location                                       = module.resource_group.location
-  resource_group_name                            = module.resource_group.name
+  location                                       = var.recovery_vault_config.location
+  resource_group_name                            = var.recovery_vault_config.name
   cross_region_restore_enabled                   = var.recovery_vault_config.cross_region_restore_enabled
   alerts_for_all_job_failures_enabled            = var.recovery_vault_config.alerts_for_all_job_failures_enabled
   alerts_for_critical_operation_failures_enabled = var.recovery_vault_config.alerts_for_critical_operation_failures_enabled

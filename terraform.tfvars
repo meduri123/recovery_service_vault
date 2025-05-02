@@ -1,5 +1,5 @@
-subscription_id     = "c5dd9b7d-a3b4-4e19-8889-fbbc538569e7"
-tenant_id           = "be0688bf-d17d-4fe9-a146-37b977388ad7"
+# subscription_id     = "c5dd9b7d-a3b4-4e19-8889-fbbc538569e7"
+# tenant_id           = "be0688bf-d17d-4fe9-a146-37b977388ad7"
 
 recovery_vault_config = {
   # name                                           = "recovery-vault-prod"

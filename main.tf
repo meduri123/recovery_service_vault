@@ -16,7 +16,7 @@ module "azure_recovery_services_vault" {
   
   name                                           = each.key
   location                                       = var.recovery_vault_config.location
-  resource_group_name                            = var.recovery_vault_config.name
+  resource_group_name                            = var.recovery_vault_config.resource_group_name
   cross_region_restore_enabled                   = var.recovery_vault_config.cross_region_restore_enabled
   alerts_for_all_job_failures_enabled            = var.recovery_vault_config.alerts_for_all_job_failures_enabled
   alerts_for_critical_operation_failures_enabled = var.recovery_vault_config.alerts_for_critical_operation_failures_enabled

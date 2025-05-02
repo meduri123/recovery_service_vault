@@ -17,7 +17,7 @@ output "vault_ids" {
 
 output "vault_names" {
   description = "IDs of the VM Backup Policies"
-  value       = { for k, v in module.azure_recovery_services_vault : k => v.resource_id }
+  value       = { for k, v in module.azure_recovery_services_vault : k => v.resource.name }
   
 }
 # output "vault_locations" {

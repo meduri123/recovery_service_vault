@@ -151,19 +151,19 @@ recovery_vault_config = {
       }
     }
   }
-}
+ }
 
-vm_backup_policies = {
-  Default = {
-    name              = "McCainDefault"
-    timezone          = "Eastern Standard Time"
-    frequency         = "Daily"
-    time              = "23:00"
-    retention_daily   = { count = 7 }
-    retention_weekly  = { count = 0, weekdays = [] }
-    retention_monthly = { count = 0, weekdays = [], weeks = [] }
-    retention_yearly  = { count = 0, weekdays = [], weeks = [], months = [] }
-  }
-}
+# vm_backup_policies = {
+#   Default = {
+#     name              = "McCainDefault"
+#     timezone          = "Eastern Standard Time"
+#     frequency         = "Daily"
+#     time              = "23:00"
+#     retention_daily   = { count = 7 }
+#     retention_weekly  = { count = 0, weekdays = [] }
+#     retention_monthly = { count = 0, weekdays = [], weeks = [] }
+#     retention_yearly  = { count = 0, weekdays = [], weeks = [], months = [] }
+#   }
+# }
 
 

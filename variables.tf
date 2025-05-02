@@ -33,29 +33,29 @@ variable "recovery_vault_config" {
     file_share_backup_policy = any
   })
 }
-variable "vm_backup_policies" {
-  type = map(object({
-    name                = string
-    timezone            = string
-    frequency           = string
-    time                = string
-    retention_daily     = object({
-      count = number
-    })
-    retention_weekly    = object({
-      count = number
-      weekdays = list(string)
-    })
-    retention_monthly   = object({
-      count = number,
-      weekdays = list(string)
-      weeks    = list(string)
-    })
-    retention_yearly    = object({
-      count = number
-      weekdays = list(string)
-      weeks    = list(string)
-      months   = list(string)
-    })
-  }))
-}
+# variable "vm_backup_policies" {
+#   type = map(object({
+#     name                = string
+#     timezone            = string
+#     frequency           = string
+#     time                = string
+#     retention_daily     = object({
+#       count = number
+#     })
+#     retention_weekly    = object({
+#       count = number
+#       weekdays = list(string)
+#     })
+#     retention_monthly   = object({
+#       count = number,
+#       weekdays = list(string)
+#       weeks    = list(string)
+#     })
+#     retention_yearly    = object({
+#       count = number
+#       weekdays = list(string)
+#       weeks    = list(string)
+#       months   = list(string)
+#     })
+#   }))
+# }
